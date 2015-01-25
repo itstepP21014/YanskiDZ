@@ -1,0 +1,6 @@
+#ifndef ANIMATIONKUB_H_INCLUDED
+#define ANIMATIONKUB_H_INCLUDED
+
+void animationKUB(int);
+
+#endif // ANIMATIONKUB_H_INCLUDED
