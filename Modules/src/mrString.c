@@ -23,3 +23,18 @@ int myStrcmp(const char *a,const char *b)
     }
     return result;
 }
+
+char *myStrcpy(char *a,char *b)
+{
+    int i;
+    while(b[i]!=0)
+    {
+        a[i]=b[i];
+        ++i;
+    }
+    if (a[i]!=b[i])
+    {
+        a[i]=b[i];
+    }
+    return a;
+}
