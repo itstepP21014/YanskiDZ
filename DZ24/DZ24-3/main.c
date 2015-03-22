@@ -5,11 +5,6 @@ int main()
 {
     int versh, rebra;
     int **ar=NULL;
-    ar=(int**)malloc(versh*sizeof(int*));
-    for (int i=0; i<versh;++i)
-    {
-        ar[i]=(int*)malloc(rebra*sizeof(int*));
-    }
     FILE *file;
     file = fopen("graff.txt","r");
     if (file == NULL)
@@ -17,12 +12,18 @@ int main()
         printf("Error!!!\a\n");
     }
     fscanf(file,"%d %d",&versh,&rebra);
-    for(int i=0; i<versh; ++i)
+    ar=(int**)malloc(versh*sizeof(int*));
+    for (int i=0; i<versh;++i)
     {
-        for(int j=0; j<rebra; ++j)
+        ar[i]=(int*)malloc(rebra*sizeof(int*));
+    }
+
+    for(int i=0; i<2; ++i)
+    {
+        for(int j=0; j<7; ++j)
         {
             fscanf(file,"%d",&ar[i]);
-            printf("%d",ar[i]);
+            printf("%d ",ar[i]);
         }
     }
     fclose(file);
